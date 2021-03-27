@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const cors = require('cors')
-const PORT = 8000
+const port = process.env.PORT || 8000
 
 let players = {
     'hakeem': {
@@ -46,7 +46,7 @@ app.get('/api/players/:playername', (request, response) => {
 
 })
 // necessary listening function for the server
-app.listen(PORT, () => {
-    console.log(`server running on port: ${PORT}`);
+app.listen(port, () => {
+    console.log(`server running on port: ${port}`);
 
 })
